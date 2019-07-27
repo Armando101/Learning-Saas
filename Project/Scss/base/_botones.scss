@@ -1,0 +1,32 @@
+/*********************************************************
+	$BUTTONS
+*********************************************************/
+
+.btn {
+	display: inline-block;
+	color:$buttoncolor;
+	background-color: $buttonbackgroundcolor;
+	line-height: 2.5;
+	border-radius: $border-radius;
+	font-size: $buttonfontsize;
+
+	// El & es para hacer una anidacion dentro de la clase padre, el & hacer referencia a la clase padre
+	&__icon {
+		font-size: 0.6em;
+	}
+
+	&--info {
+		background-color: $color-info;
+	}
+
+}
+	//Podriamos andidar de la siguiente forma, sin enbargo no es recomendable ya que no podremos reutilizar el codigo, por esta razon incluimos dentro de la clase padre y hacemos referencia a esta con &
+
+//	.btn__icon {
+//		font-size: 0.6em;
+//	}
+//
+//	.btn--info {
+//		background-color: $color-info;
+//	}
+//

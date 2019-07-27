@@ -1,0 +1,31 @@
+Diferencias entre Sass, Stylus y Less
+
+	Aunque hay muchos preprocesadores, en este curso nos vamos a concentrar en Sass, Stylus y Less.
+
+	Less, por ejemplo, es un preprocesador muy simple.
+	Sass, por otro lado, es una herramienta muy interesante gracias a su comunidad.
+	Finalmente, Stylus tiene la ventaja de que es muy completo e incluso complejo.
+
+	Elegir cuál es el mejor procesador depende de lo que queremos lograr con el proyecto. Algunas de las razones están relacionadas con el equipo y las necesidades que tenemos con el proyecto.
+
+****************************************************************************************************
+Compilación de código en archivos CSS
+
+	Una de las primeras cosas que tenemos que aprender cuando estamos trabajando con Preprocesadores es la compilación de código que se compilará en archivos de CSS. En Mac utilizamos Codekit, y para Windows podemos usar Preposs.
+
+	En la plataforma prepros tenemos varias opciones.
+	Output Style: Le decimos como queremos comprimir el css, usualmente comprimimos cuando subimos a producción.
+
+	
+	Creamos una carpeta donde estará nuestro proyecto, dentro de ésta creamos otras dos, una de nombre Scss con un archivo styles.scss y otra de nombre css con un archivo style.css
+	Cuando hacemos un cambio en el archivo .scss, este cambio se ve en el archivo .css
+
+****************************************************************************************************
+Estructura de CSS
+
+	La primera ventaja que se nos ocurre es que podemos organizar nuestro Sass. Lo clave es que podemos separar nuestro código en archivos. Ya no tenemos que revisar un archivo muy amplio, sino que podemos hacer modificaciones a un solo archivo, lo que nos hace el trabajo mucho más fácil. Los archivos externos los nombramos un underscore y en el archivo principal lo llamamos con un @import
+
+****************************************************************************************************
+Variables
+
+	Las variables son elementos que podemos definir y asignarle un valor específico. 

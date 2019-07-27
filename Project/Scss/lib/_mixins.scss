@@ -1,0 +1,22 @@
+/*********************************************************
+	$MIXINS
+*********************************************************/
+// Los mixins nos ayudan a reciclar declaraciones para evitar mucho trabajo
+// Los mixins tambien pueden recibir argumentos
+// Por ejemplo puedo hacer que mi mixin reciba como parametro un cierto ancho maximo de pagina
+// Cuando yo incluyo mi mixin si no le pongo ningun argumento, por defecto tomara el valor que le estoy dando
+// En el caso de abajo le estoy pasando como parametro por defecto otra variable llamada page-max-width
+
+@mixin max-width($maxwidth: $page-max-width) {
+	max-width: $maxwidth;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin respond-to($width) {
+	@media only screen and (min-width: $width) {
+		// Colocamos la directiva content
+		// Esta varible directiva quiere decir que todo el bloque de codigo que escribamos cuando hagamos uso de este mxin, se pondra aqui en el css
+		@content;
+	}
+}

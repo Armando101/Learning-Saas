@@ -1,0 +1,55 @@
+Variables
+
+	Las variables son elementos que podemos definir y asignarle un valor específico.
+
+Mixins
+
+	Lo que hacen los mixins nos ayudan a reciclar declaraciones para evitar mucho trabajo. Dentro de los archivos de nuestro curso vamos a crear una carpeta llamada mixins. Para esto vamos a usar @mixin.
+
+
+Funciones
+
+	Sass tiene muchas funciones que podemos usar cuando estamos modificando CSS. Muchas de estas funciones son muy útiles como por ejemplo aclarar un color u oscurecerlo. Así hay muchísimas más, sin embargo hay algunas que no nos permiten hacer cambios visuales y que pueden parecer no tan útiles.
+
+	El siguiente enlace muestra las funciones que tiene sass
+	https://sass-lang.com/documentation/functions
+
+	Podemos crear nuestras propias funciones de la siguiente forma
+
+	******** Sass *********
+	@function suma($numero-uno, $numero-dos) {
+		@return $numero-uno + $numero-dos;
+	}
+
+	.div {
+		padding: suma(10px, 5px);
+	}
+
+	******** CSS *********
+	.div {
+		padding: 15px;
+	}
+
+
+Ejemplos de Funciones
+	
+	Vamos a crear un mapa (Arreglo clave valor) de distintos tipos de fuente
+	
+	********************* Sass *********************
+	$fs:(	// Definimos un mapa con sus claves y valores dependiendo el tamnio de fuente
+		big: 24px,
+		normal: 16px,
+		small: 14px,
+		x-small: 12px
+	);
+
+	// Declaramos algunas clases
+	p {
+		// Con la función map-get le estamos diciendo que vamos a pasar un mapa y la clave
+		font-size: map-get($fs, normal);
+	}
+
+	small {
+		color: grey;
+		font-size: map-get($fs, x-small);
+	}

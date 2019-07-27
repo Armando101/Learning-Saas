@@ -1,0 +1,68 @@
+Listas y directivas each
+	
+	************** Sass **************************
+
+	// Declaro una lista de nombre font-weights que tiene 3 elementos
+	$font-weights: normal bold italic;
+
+	// Usamos un ciclo for each el cual se itera sobre cada uno de los elementos de la lista font-weights
+
+	@each $font in ($font-weights) {
+		// Crea una clase con el nombre de cada iteración ($font)
+		.#{font} {font-weight: $font;}
+
+	}
+
+	*********** CSS **************************
+
+	.normal {
+		font-weight: normal;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	.italic {
+		font-weight: italic;
+	}
+
+Ciclos for/Each
+
+******** Sass ***************
+	$for $i from 1 to 5 {
+		.class-#{$i} {
+			&:before {
+			content: "#{$i}";
+			}
+		}
+	}
+
+
+********** CSS *************
+	.class-1:before {
+		content: "1";
+	}
+
+	.class-2:before {
+		content: "2";
+	}
+
+	.class-3:before {
+		content: "3";
+	}
+
+	.class-4:before {
+		content: "4";
+	}
+
+Condicionales
+	
+	$background-color: black;
+
+	$if $background-color == black {
+		p {
+			text-color: white;
+		}
+	}
+

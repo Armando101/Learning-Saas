@@ -65,4 +65,3 @@ Condicionales
 			text-color: white;
 		}
 	}
-
